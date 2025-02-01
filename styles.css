@@ -1,25 +1,58 @@
+/* Asosiy stil */
 body {
-  font-family: Arial, sans-serif;
-  transition: 0.3s;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    transition: background 0.3s, color 0.3s;
 }
 
-.theme1 { background: #fff; color: #333; }
-.theme2 { background: #2c3e50; color: #ecf0f1; }
-.theme3 { 
-  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-  color: white;
+/* Theme 1: Yorqin */
+.theme1 {
+    background: #ffffff;
+    color: #333333;
 }
 
-.container {
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.theme1 .dars-item {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
 }
 
+/* Theme 2: Tungi */
+.theme2 {
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+.theme2 .dars-item {
+    background: #34495e;
+    border: 1px solid #2c3e50;
+}
+
+/* Theme 3: Gradient */
+.theme3 {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    color: white;
+}
+
+.theme3 .dars-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Umumiy stil */
 .dars-item {
-  padding: 10px;
-  margin: 5px;
-  border-radius: 5px;
-  background: rgba(255,255,255,0.1);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.theme-buttons {
+    margin-bottom: 20px;
+}
+
+.theme-buttons button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
