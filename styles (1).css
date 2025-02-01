@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  transition: 0.3s;
+}
+
+.theme1 { background: #fff; color: #333; }
+.theme2 { background: #2c3e50; color: #ecf0f1; }
+.theme3 { 
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  color: white;
+}
+
+.container {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.dars-item {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.1);
+}
