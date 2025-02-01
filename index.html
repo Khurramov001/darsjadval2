@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dars Jadvali</title>
-  <link rel="stylesheet" href="styles.css">
+    <title>Dars Jadvali</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .dars-item {
+            background: #f0f0f0;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
-  <!-- Theme tanlash -->
-  <div class="theme-buttons">
-    <button onclick="changeTheme('theme1')">Yorqin</button>
-    <button onclick="changeTheme('theme2')">Tungi</button>
-    <button onclick="changeTheme('theme3')">Gradient</button>
-  </div>
+    <h1>Dars Jadvali</h1>
+    <div id="jadval"></div>
 
-  <!-- Jadval -->
-  <div class="container" id="jadval"></div>
-
-  <script src="script.js"></script>
+    <script>
+        fetch('dars_jadvali.json') // JSON fayl manzilini to'g'ri ko'rsating
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('jadval');
+                data.forEach(dars => {
+                    container.innerHTML += `
+                        <div class="dars-item">
+                            <h3>📚 ${dars.C}</h3>
+                            <p>🕒 Vaqt: ${dars.G}</p>
+                            <p>👨🏫 O'qituvchi: ${dars.F}</p>
+                            <p>📅 Kun: ${dars.A} (${dars.B})</p>
+                            <p>📍 Joy: ${dars.D}</p>
+                            <p>📝 Turi: ${dars.E}</p>
+                        </div>
+                    `;
+                });
+            })
+            .catch(error => console.error("Xato:", error));
+    </script>
 </body>
 </html>
